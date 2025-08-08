@@ -515,3 +515,115 @@
     font-size: 25px;
     padding-right: 10px;
   }
+
+  .banner-mizano {
+      margin: 30px;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shn-cr {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      background: #111;
+      border: 2px solid #ff00c8;
+      padding: 20px 30px;
+      border-radius: 16px;
+      max-width: 1000px;
+      width: 95%;
+      box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
+      overflow: hidden;
+    }
+
+    /* Shine effect over the entire container */
+    .shn-cr::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+      transform: skewX(-20deg);
+      animation: shine 6s infinite;
+      z-index: 1;
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 150%;
+      }
+    }
+
+    .shn-cr-br {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 2;
+    }
+
+    .shn-cr-br img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .shn-cr-br-nm {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .pr-ms {
+      flex-grow: 1;
+      color: #ccc;
+      font-size: 16px;
+      z-index: 2;
+    }
+
+    .pr-ms strong {
+      color: #ff00c8;
+    }
+
+    .pr-ms a {
+        color: #ff00c8;
+        text-decoration: none;
+        cursor: cell;
+    }
+
+    .shn-lns {
+      display: flex;
+      gap: 12px;
+      z-index: 2;
+    }
+
+    .shn-lns a {
+      color: #00f0ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .shn-lns a:hover {
+      color: #ff00c8;
+    }
+
+    @media (max-width: 768px) {
+      .shn-cr {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .pr-ms {
+        flex-grow: 0;
+      }
+    }
